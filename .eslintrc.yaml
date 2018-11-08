@@ -1,0 +1,23 @@
+extends: google
+
+parser: espree
+
+parserOptions:
+  ecmaVersion: 2018
+  sourceType: module
+
+env:
+  node: true
+  es6: true
+
+rules:
+  padded-blocks:
+    - off
+
+overrides:
+  - files: '**/*.test.js'
+    env:
+      node: true
+      es6: true
+      mocha: true
+    rules: {}
