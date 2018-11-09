@@ -1,6 +1,4 @@
 --colors
 --inline-diffs
 --reporter spec
---require mocha-clean
---require ./test/mocha.setup
-**/*.test.js
+--require ./test/setup

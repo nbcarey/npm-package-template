@@ -4,8 +4,9 @@
   "description": "A basic template for an NPM package or Node.js module with eslint, mocha, etc. all wired up.",
   "main": "index.js",
   "scripts": {
-    "lint": "eslint \"**/*.js\"",
-    "test": "nyc mocha"
+    "lint": "eslint './**/*.js'",
+    "test": "nyc mocha './**/*.test.js'",
+    "test-fast": "mocha --bail './**/*.test.js'"
   },
   "keywords": [],
   "author": "Nicholas Carey <nicholas.carey@nordstrom.com>",
@@ -14,15 +15,14 @@
     "type": "git",
     "url": "https://github.com/nbcarey/npm-package-template.git"
   },
-  "license": "ISC",
-  "dependencies": {},
+  "license": "UNLICENSED",
   "devDependencies": {
-    "chai": "^4.1.2",
+    "chai": "^4.2.0",
     "chai-as-promised": "^7.1.1",
-    "eslint": "*",
-    "eslint-config-google": "^0.9.1",
-    "mocha": "*",
-    "mocha-clean": "^1.0.0",
-    "nyc": "^11.7.1"
+    "eslint": "^5.8.0",
+    "eslint-config-google": "^0.11.0",
+    "mocha": "^5.2.0",
+    "nyc": "^13.1.0",
+    "rooty": "^2.0.0"
   }
 }
